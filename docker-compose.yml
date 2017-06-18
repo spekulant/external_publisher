@@ -1,0 +1,9 @@
+publisher:
+  build: ./publisher
+  environment:
+    REMOTE_ADDR: 192.168.0.103
+    INTERVAL: 10
+  command: python client_app.py
+  entrypoint: ["./docker-entrypoint.sh"]
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
